@@ -1,0 +1,140 @@
+﻿@media (max-width: 767px) {
+  .sitio {
+    padding: 0.65rem;
+    gap: 0.65rem;
+    padding-top: 0.65rem;
+    padding-bottom: 4.6rem;
+  }
+
+  .navegacion {
+    padding: 0.55rem 0.75rem;
+    top: auto;
+    bottom: 0;
+    border-radius: 0;
+  }
+
+  .menu {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 0.25rem;
+  }
+
+  .menu a {
+    font-size: 0.7rem;
+    padding: 0.1rem 0.05rem;
+  }
+
+  .portada {
+    grid-template-columns: 1fr;
+  }
+
+  .grilla-inicio {
+    grid-template-columns: 1fr;
+  }
+
+  .publicidades {
+    height: auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .sitio {
+    padding: 1rem;
+    padding-top: 4.1rem;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+      "encabezado encabezado"
+      "nav nav"
+      "portada portada"
+      "ciudad politica"
+      "economia cultura"
+      "deportes deportes"
+      "pie pie";
+  }
+
+  .portada {
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "principal publicidades";
+    align-items: stretch;
+  }
+
+  .principal {
+    grid-area: principal;
+  }
+
+  .publicidades {
+    grid-area: publicidades;
+    align-content: start;
+    height: 100%;
+  }
+
+  .grilla-inicio {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .menu {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 0.35rem;
+  }
+
+  .menu a {
+    font-size: 0.76rem;
+    padding: 0.12rem 0.05rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sitio {
+    padding-top: 4.1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "encabezado encabezado encabezado"
+      "nav nav nav"
+      "portada portada portada"
+      "ciudad politica economia"
+      "cultura deportes deportes"
+      "pie pie pie";
+  }
+
+  .navegacion {
+    display: grid;
+    align-items: center;
+  }
+
+  .hamburguesa {
+    display: none;
+  }
+
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 1rem;
+    font-weight: 600;
+    color: #334258;
+  }
+
+  .menu a {
+    font-size: 0.86rem;
+  }
+
+  .portada {
+    grid-template-columns: 2.2fr 1fr;
+  }
+
+  .grilla-inicio {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1366px) {
+  .sitio {
+    padding: 1.2rem;
+    padding-top: 4.3rem;
+    gap: 1rem;
+  }
+
+  .nota-principal h3 {
+    font-size: 1.35rem;
+  }
+}

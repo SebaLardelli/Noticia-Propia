@@ -1,0 +1,249 @@
+﻿:root {
+  --fondo: #f3f5f8;
+  --tarjeta: #ffffff;
+  --texto: #1b2432;
+  --texto-suave: #5c6778;
+  --marca: #8f1826;
+  --linea: #d8dde8;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--fondo);
+  color: var(--texto);
+  line-height: 1.45;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.sitio {
+  width: min(100%, 1260px);
+  margin: 0 auto;
+  padding: 0.8rem;
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "encabezado"
+    "nav"
+    "portada"
+    "ciudad"
+    "politica"
+    "economia"
+    "cultura"
+    "deportes"
+    "pie";
+}
+
+.encabezado,
+.navegacion,
+.bloque,
+.publicidades,
+.pie {
+  background: var(--tarjeta);
+  border: 1px solid var(--linea);
+  border-radius: 12px;
+}
+
+.encabezado {
+  grid-area: encabezado;
+  padding: 1rem;
+}
+
+.encabezado h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--marca);
+  line-height: 1.05;
+}
+
+.volanta,
+.edicion {
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+}
+
+.navegacion {
+  grid-area: nav;
+  padding: 0.7rem 1rem;
+  display: grid;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  border-radius: 0;
+  width: 100%;
+}
+
+.hamburguesa {
+  display: none;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0.4rem;
+  font-weight: 600;
+  color: #334258;
+  width: 100%;
+}
+
+.menu a {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  line-height: 1.1;
+  font-size: 0.78rem;
+  padding: 0.15rem 0.1rem;
+}
+
+.sitio {
+  padding-top: 3.9rem;
+}
+
+.portada {
+  grid-area: portada;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.bloque {
+  padding: 0.8rem;
+}
+
+.nota {
+  border: 1px solid var(--linea);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.nota img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.contenido-nota {
+  padding: 0.8rem;
+}
+
+.etiqueta {
+  color: var(--marca);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  margin-bottom: 0.2rem;
+}
+
+.nota-principal h3,
+.nota h3 {
+  font-size: 1.18rem;
+  line-height: 1.25;
+}
+
+.titulo-seccion {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.3rem;
+  color: #28364b;
+  margin-bottom: 0.6rem;
+}
+
+.grilla-inicio {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.publicidades {
+  padding: 0.8rem;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.anuncio {
+  border: 1px solid var(--linea);
+  border-radius: 10px;
+  padding: 0.8rem;
+  display: grid;
+  gap: 0.3rem;
+  background: #f8fafd;
+}
+
+.anuncio p {
+  font-weight: 700;
+}
+
+.anuncio span {
+  color: var(--texto-suave);
+  font-size: 0.95rem;
+}
+
+.anuncio.destacado {
+  background: linear-gradient(145deg, #7f1020, #a9283a);
+  color: #fff;
+}
+
+.anuncio.destacado span {
+  color: #f6e8eb;
+}
+
+.seccion-tema#ciudad {
+  grid-area: ciudad;
+}
+
+.seccion-tema#politica {
+  grid-area: politica;
+}
+
+.seccion-tema#economia {
+  grid-area: economia;
+}
+
+.seccion-tema#cultura {
+  grid-area: cultura;
+}
+
+.seccion-tema#deportes {
+  grid-area: deportes;
+}
+
+.encabezado,
+.seccion-tema {
+  scroll-margin-top: 0.8rem;
+}
+
+.lista-enlaces {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.lista-enlaces li {
+  border-bottom: 1px dashed var(--linea);
+  padding-bottom: 0.45rem;
+}
+
+.lista-enlaces li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.item-meta {
+  margin-top: 0.2rem;
+  color: var(--texto-suave);
+  font-size: 0.85rem;
+}
+
+a:hover {
+  color: var(--marca);
+}
+
+.pie {
+  grid-area: pie;
+  padding: 0.9rem 1rem;
+  text-align: center;
+  color: var(--texto-suave);
+}
