@@ -22,7 +22,7 @@ Trabajo practico enfocado en Mobile First, con portada principal, noticias por s
 
 ## Enlaces de entrega (publicado)
 
-- 
+- https://github.com/SebaLardelli/Noticia-Propia
 - 
 
 ## Autor
